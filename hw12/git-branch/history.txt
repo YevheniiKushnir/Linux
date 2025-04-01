@@ -1,0 +1,14 @@
+   97  git clone https://github.com/YevheniiKushnir/git-branch.git
+   98  git switch -c feature
+   99  git add .
+  100  git status
+  101  git commit -m 'changed .gitignore + add README.md'
+  102  git push -u origin feature
+  103  git add .
+  104  git status
+  105  git commit --amend -m 'changed .gitignore + add README.md + used ammend'
+  106  git merge feature main
+  107  git merge feature gitignore
+  108  git switch gitignore
+  109  git merge feature
+  110  history > history.txt
