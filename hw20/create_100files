@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DIR="/opt/131224-wdm/Kushnir_Yevhenii/hw20/odd"
+
+if [ -n "$DIR" ]; then
+    for i in {1..100}
+    do
+        touch "$DIR/$RANDOM.txt"
+    done
+else
+    echo "Директория не задана"
+fi
+

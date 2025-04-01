@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SOURCE_DIR="/opt/131224-wdm/Kushnir_Yevhenii/hw20/odd"
+EVEN_DIR="/opt/131224-wdm/Kushnir_Yevhenii/hw20/even"
+
+for file in "$SOURCE_DIR"/*; do
+    filename=$(basename "$file")
+    
+    number="${filename%.txt}"
+
+    if [ $((number % 2)) -eq 0 ]; then
+        mv "$file" "$EVEN_DIR/"
+    fi
+done
